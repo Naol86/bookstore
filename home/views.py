@@ -15,7 +15,6 @@ def home(request):
   else:
     data = {}
     category = {}
-  # data = {}
-  print(category)
+  category = data
   context = {'data':data, 'category':category}
   return render(request, 'index.html', context)
