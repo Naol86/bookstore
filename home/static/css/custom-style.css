@@ -1,0 +1,113 @@
+
+
+.bg-orange {
+  background: rgb(250,123,10);
+background: linear-gradient(180deg, rgba(250,123,10,1) 18%, rgba(251,126,14,1) 33%, rgba(249,128,21,1) 48%, rgba(236,122,20,1) 64%, rgba(249,131,25,1) 81%, rgba(255,157,28,1) 94%);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+
+.bg-dark-n {
+  background: rgb(34,34,34);
+background: linear-gradient(90deg, rgba(34,34,34,1) 18%, rgba(4,3,3,1) 33%, rgba(0,0,0,1) 48%, rgba(34,17,2,1) 64%, rgba(45,32,21,1) 81%, rgba(56,47,35,1) 94%);
+}
+
+.bg-nav {
+  background: rgb(250,123,10);
+  font-size: 25px;
+}
+
+.active {
+  text-decoration: underline;
+  transition: all 0.5s;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  background: rgb(10, 9, 9);
+}
+
+.header {
+  min-height: 50vh;
+}
+.left {
+  background: red;
+  width: 60%;
+  min-width: 200px;
+}
+.right {
+  background: blue;
+  width: 40%;
+  min-width: 150px;
+
+}
+
+.card-img-top {
+  border-radius: 50px;
+  padding: 15px;
+}
+
+.card {
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card img {
+  height: 300px;
+  object-fit: cover;
+}
+.card-body {
+  padding: 25px;
+  margin-top: -15px;
+  height: 200px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* Limits to 5 lines */
+  line-clamp: 5;
+  box-orient: vertical;
+}
+
+.card-text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5; /* Limits to 3 lines */
+  line-clamp: 5;
+  box-orient: vertical;
+}
+
+
+.card-body h3, .d-flex h4 {
+  color:  rgb(250,123,10);
+  text-transform: capitalize;
+}
+
+.btn-bg-orange{
+  background: rgb(250,123,10) !important;
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  width: 120px;
+
+}
+
+.btn-bg-orange:hover {
+  background-color: black;
+}
+
+.temp {
+  color: red;
+}
+
+/* .book-img img{
+  object-fit: cover;
+} */
+
+.navbar-brand img {
+  width: 4rem;
+}

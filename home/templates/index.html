@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  <title>home</title>
+{% endblock title %}
+
+{% block body %}
+<section class="bg-orange">
+  <div class="container header">
+    <div class="row justify-content-md-center bg-orange">
+      <div class="col left">
+        1 of 3
+      </div>
+      <div class="col right">
+        3 of 3
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="m-4">
+  <div class="row row-cols-1 row-cols-md-3 g-3 py-5">
+    {% for info in data.results %}
+      <div class="col">
+        <div class="card">
+          <img src="{{ info.image }}" class="card-img-top " alt="{{ info.name }}">
+          <div class="card-body">
+            <h3 class="card-title">{{ info.name }}</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nisi blanditiis eligendi ratione eveniet, nemo, corporis, quis id eaque praesentium voluptatem. Corporis facilis possimus ratione nesciunt repellendus commodi, voluptatum harum!</p>
+          </div>
+          <div class="d-flex justify-content-around mb-5">
+            <h4>{{ info.author }}</h4>
+            <a href="{{ info.file }}">
+              <button class="btn btn-bg-orange">Download</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock body %}
