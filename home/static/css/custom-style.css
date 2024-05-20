@@ -1,14 +1,21 @@
 
 
 .bg-orange {
-  background: rgb(250,123,10);
-background: linear-gradient(180deg, rgba(250,123,10,1) 18%, rgba(251,126,14,1) 33%, rgba(249,128,21,1) 48%, rgba(236,122,20,1) 64%, rgba(249,131,25,1) 81%, rgba(255,157,28,1) 94%);
+  /* background: rgb(250,123,10);
+background: linear-gradient(180deg, rgba(250,123,10,1) 18%, rgba(251,126,14,1) 33%, rgba(249,128,21,1) 48%, rgba(236,122,20,1) 64%, rgba(249,131,25,1) 81%, rgba(255,157,28,1) 94%); */
+background: rgb(120,42,0);
+background: linear-gradient(90deg, rgba(120,42,0,1) 18%, rgba(122,43,0,1) 33%, rgba(105,32,10,1) 48%, rgba(92,43,20,1) 66%, rgba(112,41,21,1) 81%, rgba(68,28,8,1) 94%);
   font-size: 25px;
   font-weight: bold;
+  color: white;
 }
 
 .navbar {
-  height: 55px;
+  /* height: 60px; */
+}
+.nav-link{
+  color: white;
+  font-weight: bold;
 }
 .bg-dark-n {
   background: rgb(34,34,34);
@@ -16,7 +23,8 @@ background: linear-gradient(90deg, rgba(34,34,34,1) 18%, rgba(4,3,3,1) 33%, rgba
 }
 
 .bg-nav {
-  background: rgb(250,123,10);
+  /* background: rgb(250,123,10); */
+  background: rgb(120,42,0);
   font-size: 25px;
 }
 
@@ -85,12 +93,14 @@ background: linear-gradient(90deg, rgba(34,34,34,1) 18%, rgba(4,3,3,1) 33%, rgba
 
 
 .card-body h3, .d-flex h4 {
-  color:  rgb(250,123,10);
+  /* color:  rgb(250,123,10); */
+  color: rgb(120,42,0);
   text-transform: capitalize;
 }
 
 .btn-bg-orange{
-  background: rgb(250,123,10) !important;
+  /* background: rgb(250,123,10) !important; */
+  background: rgb(120,42,0);
   color: white;
   font-weight: bold;
   border-radius: 50px;
@@ -145,4 +155,59 @@ background: linear-gradient(90deg, rgba(34,34,34,1) 18%, rgba(4,3,3,1) 33%, rgba
 
 .footer ul li {
   margin-bottom: 10px;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#mu-hero {
+  padding: 60px 0;
+}
+
+.mu-hero-left {
+  text-align: left;
+}
+
+.mu-hero-left h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.mu-hero-left p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.mu-hero-right img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+#mu-hero span {
+  font-size: 0.9rem;
+  color: #6c757d;
 }
