@@ -1,24 +1,47 @@
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinks = document.querySelectorAll(".nav-link");
 let currentNav = navLinks[0];
-const navbar = document.querySelector('.navbar');
+const navbar = document.querySelector(".navbar");
 
-navLinks.forEach((nav) => nav.addEventListener('click', handleActive));
+navLinks.forEach((nav) => nav.addEventListener("click", handleActive));
 
 function handleActive(e) {
   e.preventDefault();
   if (currentNav !== e.target) {
-    currentNav.classList.remove('active');
+    currentNav.classList.remove("active");
     currentNav = e.target;
-    currentNav.classList.add('active');
+    currentNav.classList.add("active");
   }
 }
 
-window.addEventListener('scroll', handleScroll);
+window.addEventListener("scroll", handleScroll);
 
 function handleScroll() {
   if (window.scrollY > 150) {
-    navbar.classList.add('fixed');
+    navbar.classList.add("fixed");
   } else {
-    navbar.classList.remove('fixed');
+    navbar.classList.remove("fixed");
   }
 }
+
+const panels = document.querySelectorAll(".panel-n");
+let prevActivePanel;
+let prevActiveDescription;
+
+panels.forEach((panel) => {
+  panel.addEventListener("click", () => {
+    const description = panel.querySelector(".school-description");
+
+    if (prevActivePanel && prevActivePanel !== panel) {
+      prevActivePanel.classList.remove("active-n");
+      if (prevActiveDescription) {
+        prevActiveDescription.classList.remove("expanded");
+      }
+    }
+
+    panel.classList.toggle("active-n");
+    description.classList.toggle("expanded");
+
+    prevActivePanel = panel;
+    prevActiveDescription = description;
+  });
+});

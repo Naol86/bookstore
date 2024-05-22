@@ -1,12 +1,6 @@
-{% extends 'base.html' %}
-
-{% block title %}
-  <title>home</title>
-{% endblock title %}
-
-{% block body %}
-
-{% load static %}
+{% extends 'base.html' %} {% block title %}
+<title>home</title>
+{% endblock title %} {% block body %} {% load static %}
 
 <!-- Start Featured Slider -->
 <section id="mu-hero" class="py-5 bg-orange">
@@ -14,14 +8,25 @@
     <div class="row align-items-center">
       <div class="col-md-6 order-md-2">
         <div class="mu-hero-right text-center">
-          <img src="{% static '/favicon.png' %}" alt="Ebook img" class="img-fluid">
+          <img
+            src="{% static '/favicon.png' %}"
+            alt="Ebook img"
+            class="img-fluid"
+          />
         </div>
       </div>
       <div class="col-md-6 order-md-1">
         <div class="mu-hero-left">
           <h1>Perfect Landing Page Template to Present Your eBook</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam saepe, recusandae quidem nulla! Eveniet explicabo perferendis aut, ab quos omnis labore laboriosam quisquam hic deserunt ipsum maxime aspernatur velit impedit.</p>
-          <a href="#" class="btn btn-primary">Download Now!</a>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
+            saepe, recusandae quidem nulla! Eveniet explicabo perferendis aut,
+            ab quos omnis labore laboriosam quisquam hic deserunt ipsum maxime
+            aspernatur velit impedit.
+          </p>
+          <a href="{% url 'login' %}" class="btn btn-bg-orange bg-success"
+            >Get Started</a
+          >
         </div>
       </div>
     </div>
@@ -29,38 +34,62 @@
 </section>
 <!-- End Featured Slider -->
 
-{% comment %} 
-<section class="bg-orange">
-  <div class="container header">
-    <div class="row justify-content-md-center bg-orange">
-      <div class="col left">
-        1 of 3
-      </div>
-      <div class="col right">
-        3 of 3
-      </div>
-    </div>
-  </div>
-</section> {% endcomment %}
+<!--- start show photo -->
 
-<div class="m-4">
+<h2>school Info</h2>
+<div class="body-n">
+  <div class="container-n">
+    {% for info in data.results %}
+
+    <div
+      class="panel-n"
+      style="background-image: url('{% static 'favicon.png' %}')"
+    >
+      <div class="school-description">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa
+          doloremque nulla, quia unde cum perspiciatis, enim earum quis alias in
+          assumenda? Nihil vero esse dignissimos vel debitis dolorem reiciendis
+          cum!
+        </p>
+      </div>
+      <h3>
+        {{info.name}}
+        <button class="btn btn-bg-orange">visit now</button>
+      </h3>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<!-- end show photo -->
+
+<div class="pd-4 bg-temp">
   <div class="row row-cols-1 row-cols-md-3 g-3 py-5">
     {% for info in data.results %}
-      <div class="col">
-        <div class="card">
-          <img src="{{ info.image }}" class="card-img-top " alt="{{ info.name }}">
-          <div class="card-body">
-            <h3 class="card-title">{{ info.name }}</h3>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nisi blanditiis eligendi ratione eveniet, nemo, corporis, quis id eaque praesentium voluptatem. Corporis facilis possimus ratione nesciunt repellendus commodi, voluptatum harum!</p>
-          </div>
-          <div class="d-flex justify-content-around mb-5">
-            <h4>{{ info.author }}</h4>
-            <a href="{{ info.file }}">
-              <button class="btn btn-bg-orange">Download</button>
-            </a>
-          </div>
+    <div class="col">
+      <div class="card">
+        <img
+          src="{{ info.image }}"
+          class="card-img-top"
+          alt="{{ info.name }}"
+        />
+        <div class="card-body">
+          <h3 class="card-title">{{ info.name }}</h3>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic nisi
+            blanditiis eligendi ratione eveniet, nemo, corporis, quis id eaque
+            praesentium voluptatem. Corporis facilis possimus ratione nesciunt
+            repellendus commodi, voluptatum harum!
+          </p>
+        </div>
+        <div class="d-flex justify-content-around mb-2 mt-3">
+          <h4>{{ info.author }}</h4>
+          <a href="{{ info.file }}">
+            <button class="btn btn-bg-orange">Download</button>
+          </a>
         </div>
       </div>
+    </div>
     {% endfor %}
   </div>
   <div class="container d-flex justify-content-center">
@@ -72,5 +101,4 @@
     </a>
   </div>
 </div>
-{% include 'footer.html' %}
-{% endblock body %}
+{% include 'footer.html' %} {% endblock body %}
