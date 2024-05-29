@@ -22,7 +22,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             
-            {% for sub_catagory in category.results %}
+            {% for sub_catagory in category %}
             <li><a class="dropdown-item" href="#">{{ sub_catagory.name }}</a></li>
             <li><hr class="dropdown-divider"></li>
             {% endfor %}
@@ -32,8 +32,8 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <form class="d-flex" action="{% url 'search' %}" method="GET" >
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name='searchInput'>
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>

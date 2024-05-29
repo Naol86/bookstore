@@ -45,3 +45,13 @@ panels.forEach((panel) => {
     prevActiveDescription = description;
   });
 });
+
+
+
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var query = document.getElementById('searchInput').value;
+  if (query) {
+    window.location.href = "{% url 'search' %}?q=" + encodeURIComponent(query);
+  }
+});
