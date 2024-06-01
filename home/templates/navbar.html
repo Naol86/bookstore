@@ -13,23 +13,26 @@
         <li class="nav-item">
           <a class="link active" aria-current="page" href="{% url 'home' %}">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="link" href="#">Link</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Category
+            Schools
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             
-            {% for sub_catagory in category %}
-            <li><a class="dropdown-item" href="#">{{ sub_catagory.name }}</a></li>
+            <li><a class="dropdown-item" href="#">School of Electrical and Computing</a></li>
             <li><hr class="dropdown-divider"></li>
-            {% endfor %}
-              
-            {% comment %} <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li> {% endcomment %}
+            <li><a class="dropdown-item" href="#">School of Civil and Architecture</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">School of Mechanical and Chemical</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">School of Electrical and Power control</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">School of Applied Science</a></li>
+            
           </ul>
+        </li>
+        <li class="nav-item">
+          <a class="link" href="#">About</a>
         </li>
       </ul>
       <form class="d-flex" action="{% url 'search' %}" method="GET" >
