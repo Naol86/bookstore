@@ -52,6 +52,7 @@ background: linear-gradient(180deg, rgba(250,123,10,1) 18%, rgba(251,126,14,1) 3
 }
 
 .active {
+  font-weight: bolder;
   text-decoration: underline;
   transition: all 0.5s;
 }
@@ -249,9 +250,9 @@ header {
 }
 
 .panel-n {
-  background-size: auto 100%;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   border-radius: 5rem;
   color: rgb(250, 250, 250);
   cursor: pointer;
@@ -263,13 +264,14 @@ header {
 }
 
 .panel-n h3 {
+  width: 50%;
   font-size: 24px;
   position: absolute;
   bottom: 20px;
   left: 30px;
   margin: 0;
   opacity: 0;
-  color: rgb(92, 34, 3);
+  /* color: rgb(92, 34, 3); */
 }
 
 .panel-n.active-n {
@@ -309,4 +311,17 @@ header {
   .panel:nth-last-of-type(5) {
     display: none;
   }
+}
+
+
+.link {
+  text-decoration: none;
+  /* text-decoration-style: none; */
+  color: white;
+  margin: 5px;
+  /* font-weight: bold; */
+}
+
+.link:hover {
+  color: #f8f9fa;
 }

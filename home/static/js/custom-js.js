@@ -1,11 +1,11 @@
-const navLinks = document.querySelectorAll(".nav-link");
+const navLinks = document.querySelectorAll(".link");
 let currentNav = navLinks[0];
 const navbar = document.querySelector(".navbar");
 
 navLinks.forEach((nav) => nav.addEventListener("click", handleActive));
 
 function handleActive(e) {
-  e.preventDefault();
+  // e.preventDefault();
   if (currentNav !== e.target) {
     currentNav.classList.remove("active");
     currentNav = e.target;
