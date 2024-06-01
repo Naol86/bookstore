@@ -52,3 +52,7 @@ def search(request):
     # Prepare the context data and render the template
     context = {'data': data}
     return render(request, 'search.html', context)
+  
+
+def school(request, id):
+  return render(request, 'school.html')
