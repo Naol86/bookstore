@@ -26,33 +26,32 @@ def login(request):
 
 
 def search(request):
-    # Extract the search query from the request
-    query = request.GET.get('searchInput')
-    print(query)
-    
-    # Ensure query is not empty before proceeding
+    query = request.GET.get('searchInput')    
     if not query:
         data = {}
     else:
-        # Prepare query parameter
         params = {'query': query}
-        
-        # Make the GET request to the external API
         response = requests.get('https://unisource.nahom.eu.org/api/v1/resource/', params=params)
         
         # Check the response status code
         if response.status_code == 200:
-            # Parse JSON response into Python data
             data = response.json()
         else:
-            # If response status code is not 200, handle it gracefully
             data = {}
-            # Optionally, you can log the error or handle it in a different way
-            
+
     # Prepare the context data and render the template
     context = {'data': data}
     return render(request, 'search.html', context)
   
 
 def school(request, id):
-  return render(request, 'school.html')
+  params = {
+    "category": id
+  }
+  response = requests.get('https://unisource.nahom.eu.org/api/v1/resource/', params=params)
+  if response.status_code == 200:
+    data = response.json()
+  else:
+    data = {}
+  context = {'data':data}
+  return render(request, 'school.html', context)
