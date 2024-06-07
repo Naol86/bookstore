@@ -17,8 +17,13 @@
       </div>
       <div class="col-md-6 order-md-1">
         <div class="mu-hero-left">
-          {% comment %} <h1>Perfect Landing Page Template to Present Your eBook</h1> {% endcomment %}
-          <h1> <strong>Unisource</strong> university resources for <strong>ASTU</strong> students</h1>
+          {% comment %}
+          <h1>Perfect Landing Page Template to Present Your eBook</h1>
+          {% endcomment %}
+          <h1>
+            <strong>Unisource</strong> university resources for
+            <strong>ASTU</strong> students
+          </h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam
             saepe, recusandae quidem nulla! Eveniet explicabo perferendis aut,
@@ -41,7 +46,9 @@
   <div class="container-n">
     <div
       class="panel-n"
-      style="background-image: url('{% static 'img/school-of-electrical.jpg' %}')"
+      style="
+        background-image: url('{% static 'img/school-of-electrical.jpg' %}');
+      "
     >
       <div class="school-description">
         <p>
@@ -52,8 +59,10 @@
         </p>
       </div>
       <h3>
-        school of electrical and computing 
-        <button class="btn btn-bg-orange"><a class="school-link" href="{% url 'school' 1 %}">visit now</a></button>
+        school of electrical and computing
+        <button class="btn btn-bg-orange">
+          <a class="school-link" href="{% url 'school' 1 %}">visit now</a>
+        </button>
       </h3>
     </div>
     <div
@@ -70,7 +79,9 @@
       </div>
       <h3>
         arch and civil
-        <button class="btn btn-bg-orange"><a class="school-link" href="{% url 'school' 2 %}">visit now</a></button>
+        <button class="btn btn-bg-orange">
+          <a class="school-link" href="{% url 'school' 2 %}">visit now</a>
+        </button>
       </h3>
     </div>
     <div
@@ -87,12 +98,16 @@
       </div>
       <h3>
         school of mech
-        <button class="btn btn-bg-orange"><a class="school-link" href="{% url 'school' 3 %}">visit now</a></button>
+        <button class="btn btn-bg-orange">
+          <a class="school-link" href="{% url 'school' 3 %}">visit now</a>
+        </button>
       </h3>
     </div>
     <div
       class="panel-n"
-      style="background-image: url('{% static 'img/school-of-communicationandpower.jpg' %}')"
+      style="
+        background-image: url('{% static 'img/school-of-communicationandpower.jpg' %}');
+      "
     >
       <div class="school-description">
         <p>
@@ -103,8 +118,10 @@
         </p>
       </div>
       <h3>
-        school of communication 
-        <button class="btn btn-bg-orange"><a class="school-link" href="{% url 'school' 4 %}">visit now</a></button>
+        school of communication
+        <button class="btn btn-bg-orange">
+          <a class="school-link" href="{% url 'school' 4 %}">visit now</a>
+        </button>
       </h3>
     </div>
     <div
@@ -120,8 +137,10 @@
         </p>
       </div>
       <h3>
-        school of applied science 
-        <button class="btn btn-bg-orange"><a class="school-link" href="{% url 'school' 5 %}">visit now</a></button>
+        school of applied science
+        <button class="btn btn-bg-orange">
+          <a class="school-link" href="{% url 'school' 5 %}">visit now</a>
+        </button>
       </h3>
     </div>
   </div>
@@ -130,7 +149,7 @@
 
 <div class="pd-4 bg-temp">
   <div class="row row-cols-1 row-cols-md-3 g-3 py-5">
-    {% for info in data.results %}
+    {% for info in data %}
     <div class="col">
       <div class="card">
         <img
