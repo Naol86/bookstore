@@ -7,7 +7,7 @@ import requests
 def home(request):
   if request.method == 'POST':
     pass
-  response = requests.get('https://unisource.nahom.eu.org/api/v1/resource/')
+  response = requests.get('https://127.0.0.1:8000/books/1')
   # response = requests.get('https://unisource.onrender.com/api/v1/resource/')
   cat = requests.get('https://unisource.nahom.eu.org/api/v1/category/')
   if response.status_code == 200:
